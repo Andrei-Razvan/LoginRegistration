@@ -1,0 +1,23 @@
+server:
+  port: 8000
+ 
+spring:
+    application:
+      name: address-service
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/registrationandlogin
+        username: "root"
+        password: "Iceland1!"
+        hikari:
+            initialization-fail-timeout: 0  
+    sql:
+        int:
+          platform: mysql
+          mode: always        
+    jpa:
+        databasePlatform: "org.hibernate.dialect.MySQLDialect"
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: update
